@@ -53,7 +53,7 @@ public class BinaryTree<dataType>
       if(node == null)
          return -1;
       else
-         return 1 + Math.max (getHeight(node.left), getHeight(node.right));
+         return 1 + Math.max (getHeight(node.getLeft()), getHeight(node.getRight()));
    }
    
    /**
@@ -79,7 +79,7 @@ public class BinaryTree<dataType>
       if (node == null)
          return 0;
       else
-         return 1 + getSize(node.left) + getSize(node.right);
+         return 1 + getSize(node.getLeft()) + getSize(node.getRight());
    }
    
    /**
@@ -114,8 +114,8 @@ public class BinaryTree<dataType>
       if(node != null)
       {
          visit(node);
-         preOrder(node.left);
-         preOrder(node.right);
+         preOrder(node.getLeft());
+         preOrder(node.getRight());
       }   
    }
 }

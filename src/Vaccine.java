@@ -8,23 +8,31 @@ public class Vaccine implements Comparable<Vaccine>{
     
     public Vaccine(String line)
     {
-        String[] split = line.split(",");
-         
+        String[] split = null;
         try{
+            split = line.split(",");
+            if(split.length>2){
             country = split[0];
             date = split[1];
             vacNum = split[2];
-            keyID = split[0]+split[1];       
+            keyID = split[0]+split[1];}
+            else{
+            split = line.split(",");
+            country = split[0];
+            date = split[1];
+            keyID = split[0]+split[1];
+            }
+        }
+        catch(NullPointerException e){
+            e.printStackTrace();
         }
         catch(ArrayIndexOutOfBoundsException e)
         {
+            split = line.split(",");
             country = split[0];
             date = split[1];
             vacNum = "0";
             keyID = split[0]+split[1];
-        }
-        catch(NullPointerException e){
-            e.printStackTrace();
         }
     }
     
