@@ -6,7 +6,7 @@ BINDIR=bin
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 	$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
 
-CLASSES= Vaccine.class BinaryTreeNode.class BinaryTree.class BTQueueNode.class BTQueue.class AVLTree.class AVLExperiment.class 
+CLASSES= Vaccine.class BinaryTreeNode.class BinaryTree.class AVLTree.class Gui.class AVLExperiment.class 
 CLASS_FILES=$(CLASSES:%.class=$(BINDIR)/%.class)
 
 default: $(CLASS_FILES)
