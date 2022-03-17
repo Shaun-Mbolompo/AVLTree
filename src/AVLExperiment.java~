@@ -74,7 +74,6 @@ public class AVLExperiment{
             }
             size = size - 1;
         }
-
             permu = permu-9919;
             size = 9919;
             permutation(array,size,permu);
@@ -95,11 +94,11 @@ public class AVLExperiment{
         String[] arr = new String[9919]; // Create a string array
         
         int count = 0;
-        int permutations = 1;
+        int permutations = 0;
         
         // Reads the vaccinations.csv file and stores the data into an array 
         try{
-             permutations = Integer.parseInt(args[0]);
+             permutations = Integer.parseInt(args[0]); // initializes the permutations/ randomisations needed
             
             try{
                 BufferedReader read = new BufferedReader(new FileReader("data/vaccinations.csv"));
@@ -108,10 +107,7 @@ public class AVLExperiment{
                 {
                      arr[count] = line;  
                      count++;   
-                }
-               // File newFile = new File("/home/shaun/Assignment2/data/newFile.txt");
-               // newFile.createNewFile();
-                
+                } 
             }
             catch(FileNotFoundException e)
             {
@@ -123,32 +119,38 @@ public class AVLExperiment{
         }
         catch(ArrayIndexOutOfBoundsException e){
             e.printStackTrace();
-            System.exit(0);} 
-        String[] copy = new String[9919];
+            System.exit(0);}
         
+        // calls the permutations method of the object AVLExperiment and pass in the arguments  
         exp.permutation(arr,9919,permutations);
+        
         FileWriter wrt2 = null;
         FileWriter ins = null;
         int numb = 0;
+        
+        // Creates the searching and inserting files and use them to append the number of opCount and insertOpCount for the randomised dataset
             try{
-                File search = new File("/home/shaun/Assignment2/data/searching_"+permutations);
+                File search = new File("/home/shaun/Assignment2/data/search/searching_"+permutations);
                 search.createNewFile();
-                File insert = new File("/home/shaun/Assignment2/data/inserting_"+permutations);
+                File insert = new File("/home/shaun/Assignment2/data/insert/inserting_"+permutations);
                 insert.createNewFile();
 
-                wrt2 = new FileWriter("/home/shaun/Assignment2/data/searching_"+permutations);
-                ins = new FileWriter("/home/shaun/Assignment2/data/inserting_"+permutations);
+                wrt2 = new FileWriter("/home/shaun/Assignment2/data/search/searching_"+permutations);
+                ins = new FileWriter("/home/shaun/Assignment2/data/insert/inserting_"+permutations);
+                
+                
                 for(int i =0;i<9919;i++){
-                    avl.insert(new Vaccine(arr[i]));
-                    ins.write(avl.insertOpCount+"\n");
-                    avl.insertOpCount = 0;
+                    avl.insert(new Vaccine(arr[i])); // insert the data items from the randomised data into the AVL tree
+                    ins.write(avl.insertOpCount+"\n"); // writes on the created insert file the number of insertion key comparison taken
+                    avl.insertOpCount = 0; // resets the insertOpCount to zero
                     numb++;
                     }
-                ins.close();
+                ins.close(); // close the insertion file
+                
                 for(int i =0;i<9919;i++){
-                    avl.find(new Vaccine(arr[i]));
-                    wrt2.write(avl.opCount+"\n");
-                    avl.opCount = 0;
+                    avl.find(new Vaccine(arr[i])); // searches each data item from dataset
+                    wrt2.write(avl.opCount+"\n"); // writes on the created searching file the number of search key comparison taken for each item
+                    avl.opCount = 0; // resets the opCount to zero
                     }
         }
         catch(FileNotFoundException e){
