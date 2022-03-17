@@ -12,7 +12,6 @@ public class BinaryTreeNode<dataType>
    BinaryTreeNode<dataType> left;
    BinaryTreeNode<dataType> right;
    int height;
-   int opCount;
    /**
    * BinaryTreeNode constructor to inintialize the attributes of a BinaryTreeNode
    *
@@ -27,7 +26,6 @@ public class BinaryTreeNode<dataType>
       left = l;
       right = r;
       height = 0;
-      opCount = 0;
    }
    
    /**

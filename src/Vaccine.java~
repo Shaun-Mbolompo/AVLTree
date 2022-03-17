@@ -17,6 +17,7 @@ public class Vaccine implements Comparable<Vaccine>{
             vacNum = split[2];
             keyID = split[0]+split[1];}
             else{
+            split = line.split(",");
             country = split[0];
             date = split[1];
             keyID = split[0]+split[1];
