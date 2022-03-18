@@ -174,33 +174,5 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
       else
          return (node.right == null) ? null : find (d, node.right);
    }
-   
-   /**
-   * Helper method for the treeOrder
-   * 
-   */
-   
-   public void treeOrder ()
-   {
-      treeOrder (root, 0);
-   }
-   
-   /**
-   * 
-   *
-   *
-   */
-   
-   public void treeOrder ( BinaryTreeNode<dataType> node, int level )
-   {
-      if (node != null)
-      {
-         for ( int i=0; i<level; i++ )
-            System.out.print (" ");
-         System.out.println (node.data);
-         treeOrder (node.left, level+1);
-         treeOrder (node.right, level+1);
-      }
-   }
 }
 

@@ -94,7 +94,7 @@ public class AVLExperiment{
         String[] arr = new String[9919]; // Create a string array
         
         int count = 0;
-        int permutations = 0;
+        int permutations = 1;
         
         // Reads the vaccinations.csv file and stores the data into an array 
         try{

@@ -30,7 +30,7 @@ public class AVLExperiment{
     * 
     * @param array the array to be randomised
     * @param size the size of the array
-    * @permu number of randomisation for the array
+    * @param permu number of randomisation for the array
     */
      
     public void permutation(String[] array,int size,int permu)
@@ -84,6 +84,7 @@ public class AVLExperiment{
     * The main method to run the experiment, it takes an argument to specify the number of randomisation the  
     * the vaccinations.csv file that it reads in and stores in an array must have
     *
+    * @param args takes in string argument 
     */
     
     public static void main(String[] args)

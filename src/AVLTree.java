@@ -124,7 +124,8 @@ public class AVLTree<dataType extends Comparable<? super dataType>> extends Bina
    * a node to the left is less than a root node or else right recursively  
    * 
    * @param d the type parameter datatype
-   * @param node the node of a binary tree  
+   * @param node the node of a binary tree
+   * @return node inserted  
    */
    
    public BinaryTreeNode<dataType> insert ( dataType d, BinaryTreeNode<dataType> node )

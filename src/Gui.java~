@@ -35,7 +35,12 @@ public class Gui extends JFrame implements ActionListener{
      Gui gui = new Gui();
      gui.setVisible(true);
     }
-     
+    /**
+    * Gui empty constructor, creates the windows frame, panels, labels, text area and buttons
+    * for creating a user interface
+    *
+    */
+         
     public Gui()
     {
         super("Assignment manuel");
@@ -89,22 +94,20 @@ public class Gui extends JFrame implements ActionListener{
         String action = e.getActionCommand();
         if(action.equals("Help")){
             text.setText(
-"Hi, I run the experiment through using AVLExperiment program. I use it to generate randomised arrays from the vaccinations.csv file and store the data"+ "\n" + 
-"in an AVL tree. I then use the data items from the vaccinations.csv to test the AVL tree with the different ordered data to see if it does balance the"+"\n"+
-"nodes and provide good performance for storage and retrieval of data."+"\n"+
-"If you press 'Run experiment', the experiment will be carried and the results of the experiment will be shown in few minutes. For you to end the program "+"\n"+
-"you will need to close the two graphs by clicking on the close icon on the top right after viewing them."+"\n"+
-"If you have problem seeing the graphs, you should install the matplotlib.pyplot libaray in your pc. Furthermore, if you want to see the image displayed"+ "\n" +
-"on this user interface if not appearing now, you can change the path from '/home/shaun/Assignment2/image/images.jpg' on the Gui java class under src"+ "\n" +
-"directiory by simply replacing '/home/shaun/' by the path of your pc'."+ "\n" + "\n" +
-"Thank you!");
+            "Hi, I run the experiment through using AVLExperiment program. I use it to generate randomised arrays from the vaccinations.csv file and store the data"+ "\n" + 
+            "in an AVL tree. I then use the data items from the vaccinations.csv to test the AVL tree with the different ordered data to see if it does balance the"+"\n"+
+            "nodes and provide good performance for storage and retrieval of data."+"\n"+
+            "If you press 'Run experiment', the experiment will be carried and the results of the experiment will be shown in few minutes. For you to end the program "+"\n"+
+            "you will need to close the two graphs by clicking on the close icon on the top right after viewing them."+"\n"+
+            "If you have problem seeing the graphs, you should install the matplotlib.pyplot libaray in your pc. Furthermore, if you want to see the image displayed"+ "\n" +
+            "on this user interface if not appearing now, you can change the path from '/home/shaun/Assignment2/image/images.jpg' on the Gui java class under src"+ "\n" +
+            "directiory by simply replacing '/home/shaun/' by the path of your pc'."+ "\n" + "\n" +
+            "Thank you!");
             text.setEditable(false);
         }
         else if(action.equals("Run experiment")){
 
            dispose();}
-           
-           
     }
 
 }

@@ -28,6 +28,7 @@ public class Gui extends JFrame implements ActionListener{
     /**
     * Gui no parameter constructor to set-up the GUI to be display and user to interact with
     * 
+    * @param args takes in string argument/s
     */
  
     public static void main(String[] args)
