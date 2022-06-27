@@ -1,6 +1,6 @@
 # AVLTree
 
-Hi, I run the experiment through using AVLExperiment program.
+I run the experiment through using AVLExperiment program.
 I use it to generate randomised arrays from the vaccinations.csv file extracted from the web and then store the data in an AVL tree.
 I used the data from the vaccinations.csv to test the AVL tree with different randomised datasets of the same data in order to prove that AVL trees do balance the nodes and provide good performance for storage and retrieval of data.
 
