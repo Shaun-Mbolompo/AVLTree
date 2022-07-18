@@ -1,0 +1,21 @@
+0: commit d06e817b8fe3daaf1f21ad1b713a9eb02e4d976c
+1: Author: Shaun Mbolompo <shaunmbolompo426@gmail.com>
+2: Date: Fri Mar 18 01:18:17 2022 +0200
+3:
+4: used the touch command to force compilation on the AVLExperiment file
+5:
+6: commit b25824aa7eb76477fe2e5da0f76316e09925d147
+7: Author: Shaun Mbolompo <shaunmbolompo426@gmail.com>
+8: Date: Fri Mar 18 00:43:15 2022 +0200
+9:
+...
+61: Author: Shaun Mbolompo <shaunmbolompo426@gmail.com>
+62: Date: Sat Mar 12 20:10:47 2022 +0200
+63:
+64: added the first class files for the experiment
+65:
+66: commit 12c5ac7074741a4703ab5cd34b6512939e3f0d3c
+67: Author: Shaun Mbolompo <shaunmbolompo426@gmail.com>
+68: Date: Sat Mar 12 20:08:35 2022 +0200
+69:
+70: Created the make file for compiling the classes for the experiment
