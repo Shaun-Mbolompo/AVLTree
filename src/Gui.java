@@ -52,7 +52,7 @@ public class Gui extends JFrame implements ActionListener{
         panel.setBackground(Color.PINK);
         panel.setLayout(new BorderLayout());
         
-        ImageIcon image = new ImageIcon("/home/shaun/Assignment2/image/images.jpg");
+        ImageIcon image = new ImageIcon("image/images.jpg");
         JLabel label = new JLabel("Hi there, you can press the button 'Help' if you need guidance on how the experiment work!");
         label.setIcon(image);
         panel.add(label, BorderLayout.NORTH);
