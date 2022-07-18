@@ -131,13 +131,13 @@ public class AVLExperiment{
         
         // Creates the searching and inserting files and use them to append the number of opCount and insertOpCount for the randomised dataset
             try{
-                File search = new File("/home/shaun/Assignment2/data/search/searching_"+permutations);
+                File search = new File("data/search/searching_"+permutations);
                 search.createNewFile();
-                File insert = new File("/home/shaun/Assignment2/data/insert/inserting_"+permutations);
+                File insert = new File("data/insert/inserting_"+permutations);
                 insert.createNewFile();
 
-                wrt2 = new FileWriter("/home/shaun/Assignment2/data/search/searching_"+permutations);
-                ins = new FileWriter("/home/shaun/Assignment2/data/insert/inserting_"+permutations);
+                wrt2 = new FileWriter("data/search/searching_"+permutations);
+                ins = new FileWriter("data/insert/inserting_"+permutations);
                 
                 
                 for(int i =0;i<9919;i++){
